@@ -6,7 +6,7 @@ det+=`<option value=${i}>${i}</option>`
 }
 date_id.innerHTML=det
 
-
+console.log(date_id)
 const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 let date=new Date()
 let month_id=document.querySelector("#month")
@@ -20,7 +20,7 @@ month_id.innerHTML=month
 
 let year_id=document.querySelector("#year")
 let year=""
-for(let i="1970";i<"2024";i++)
+for(let i="1970";i<=date.getFullYear();i++)
 {
 year+=`<option value=${i}>${i}</option>`
 
@@ -41,3 +41,4 @@ function dateOfBirth(event){
 
 }
    
+console.log(date.getFullYear())
